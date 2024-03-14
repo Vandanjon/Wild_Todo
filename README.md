@@ -1,5 +1,12 @@
 # Wild_Todo
 
+## V0.4
+
+- reorder folders
+- possibility to mark a task as completed
+- reorder scripts files
+- disallow the possibility to add a blank task
+
 ## V0.3
 
 - add delete option on tasks
