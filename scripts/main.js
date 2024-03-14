@@ -1,30 +1,43 @@
-const todoList = document.querySelector("ul");
-const input = document.querySelector("input");
-const button = document.querySelector("button");
+import { addTask } from "./addTask.js";
+import { updateTask } from "./updateTask.js";
+import { deleteTask } from "./deleteTask.js";
 
-button.addEventListener("click", (e) => {
-  e.preventDefault();
+function render() {
+  const form = document.querySelector("form");
 
-  const myTodo = input.value;
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  const listItem = document.createElement("li");
-  const checkbox = document.createElement("input");
-  checkbox.setAttribute("type", "checkbox");
+    const input = document.querySelector("input");
+    const todoText = input.value;
 
-  const span = document.createElement("span");
-  span.textContent = myTodo;
-
-  const deleteButton = document.createElement("button");
-  deleteButton.textContent = "supprimer";
-
-  deleteButton.addEventListener("click", function () {
-    todoList.removeChild(listItem);
+    if (todoText.trim() !== "") {
+      addTask(todoText);
+      input.value = "";
+    }
   });
 
-  listItem.appendChild(checkbox);
-  listItem.appendChild(span);
-  listItem.appendChild(deleteButton);
-  todoList.appendChild(listItem);
+  const todoList = document.querySelector("ul");
 
-  input.value = "";
-});
+  todoList.addEventListener("change", (event) => {
+    if (
+      event.target.tagName === "INPUT" &&
+      event.target.getAttribute("type") === "checkbox"
+    ) {
+      const taskElement = event.target.parentElement;
+      updateTask(taskElement);
+    }
+  });
+
+  todoList.addEventListener("click", (event) => {
+    if (
+      event.target.tagName === "BUTTON" &&
+      event.target.textContent === "supprimer"
+    ) {
+      const taskElement = event.target.parentElement;
+      deleteTask(taskElement);
+    }
+  });
+}
+
+window.onload = render;
