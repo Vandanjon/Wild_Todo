@@ -17,6 +17,10 @@ button.addEventListener("click", (e) => {
   const deleteButton = document.createElement("button");
   deleteButton.textContent = "supprimer";
 
+  deleteButton.addEventListener("click", function () {
+    todoList.removeChild(listItem);
+  });
+
   listItem.appendChild(checkbox);
   listItem.appendChild(span);
   listItem.appendChild(deleteButton);
