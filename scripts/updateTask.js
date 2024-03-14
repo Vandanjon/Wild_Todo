@@ -1,3 +1,3 @@
 export function updateTask(taskElement) {
-  taskElement.classList.add("done");
+  taskElement.classList.toggle("done");
 }

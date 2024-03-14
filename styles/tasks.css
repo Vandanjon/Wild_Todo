@@ -13,3 +13,13 @@ li {
   font-size: 1.4rem;
   list-style: none;
 }
+
+.done {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
