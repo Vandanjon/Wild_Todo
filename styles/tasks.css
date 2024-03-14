@@ -18,3 +18,8 @@ li {
   text-decoration: line-through;
   color: #ccc;
 }
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
