@@ -3,6 +3,7 @@
 ## V0.2
 
 - possibility to ask a new task
+- add specific style for tasks
 
 ## V0.1
 
