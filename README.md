@@ -1,5 +1,9 @@
 # Wild_Todo
 
+## V1.0
+
+- better design
+
 ## V0.4
 
 - reorder folders

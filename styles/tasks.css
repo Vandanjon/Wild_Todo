@@ -13,3 +13,8 @@ li {
   font-size: 1.4rem;
   list-style: none;
 }
+
+.done {
+  text-decoration: line-through;
+  color: #ccc;
+}
