@@ -1,5 +1,9 @@
 # Wild_Todo
 
+## V0.4
+
+- reorder folders
+
 ## V0.3
 
 - add delete option on tasks
