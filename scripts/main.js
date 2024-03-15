@@ -24,7 +24,7 @@ function render() {
       event.target.tagName === "INPUT" &&
       event.target.getAttribute("type") === "checkbox"
     ) {
-      const taskElement = event.target.parentElement;
+      const taskElement = event.target.parentElement.children[1];
       updateTask(taskElement);
     }
   });
