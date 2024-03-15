@@ -1,5 +1,10 @@
 # Wild_Todo
 
+## V1.2
+
+- add base breakpoints for responsive
+- relocate css files
+
 ## V1.1
 
 - correcting broken imports
