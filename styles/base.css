@@ -5,6 +5,7 @@
 
 body {
   margin: 0;
+  background-image: linear-gradient(140deg, yellow, lightgreen);
 }
 
 .page-container {
@@ -12,8 +13,29 @@ body {
   grid-template-rows: auto 1fr auto;
 
   min-height: 100vh;
+  margin: auto;
 
-  background-image: linear-gradient(140deg, yellow, lightgreen);
+  /* breakpoints */
+  /* tiny screens : 320 */
+  /* small tablets : 768 */
+  /* medium screens : 1024 */
+  /* largen screens : 1600 */
+
+  @media screen and (min-width: 321px) and (max-width: 768px) {
+    max-width: 600px;
+  }
+
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    max-width: 900px;
+  }
+
+  @media screen and (min-width: 1025px) and (max-width: 1600px) {
+    max-width: 1200px;
+  }
+
+  @media screen and (min-width: 1601px) {
+    max-width: 1600px;
+  }
 }
 
 header {
